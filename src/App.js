@@ -6,6 +6,7 @@ function App() {
       <div className="AppContainer">
         <header>
           <Profile />
+          <Title />
         </header>
         <CoursesWrap />
       </div>
@@ -25,6 +26,13 @@ function Profile() {
   );
 }
 
+function Title() {
+  return (
+    <div class="Title">
+      <h1><a href="#">Courses</a></h1>
+    </div>
+  );
+}
 
 function CoursesWrap() {
   return (

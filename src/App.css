@@ -37,15 +37,22 @@ a:hover {
   padding-bottom: 80px;
 }
 
-.Profile {
+header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   height: 50px;
   background-color: #0e0831;
   margin-bottom: 20px;
   padding: 20px;
   border-bottom: 2px solid #5d5976;
+  gap: 20px;
+}
+
+.Profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 20px;
 }
 
@@ -83,7 +90,8 @@ a:hover {
 }
 
 .CourseBlock h2 {
-  margin: 0px;
+  margin: 2px 0px;
+  font-size: 20px;
 }
 
 .CourseFooter {
@@ -125,7 +133,7 @@ a:hover {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
   .CoursesWrap {
     display: grid;
     grid-template-columns: 90%;
