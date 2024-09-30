@@ -12,9 +12,7 @@ function App() {
         </header>
         <CoursesWrap />
       </div>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }
@@ -81,9 +79,11 @@ function CourseBlock({ course }) {
 
 function Footer() {
   return (
-    <div className="Footer">
-      © 2024
-    </div>
+    <footer>
+      <div className="Footer">
+        © 2024
+      </div>
+    </footer>
   );
 }
 
