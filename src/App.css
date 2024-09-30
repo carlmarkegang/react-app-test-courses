@@ -1,0 +1,143 @@
+body {
+  background-color: #282344;
+  color: rgb(240, 248, 255);
+}
+
+button {
+  background-color: rgb(51, 108, 215);
+  color: rgb(240, 248, 255);
+  outline: transparent;
+  border: 0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.4s;
+}
+
+button:hover {
+  background-color: rgb(114 153 227);
+}
+
+a {
+  color: rgb(240, 248, 255);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9e9e9e;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+.AppContainer {
+  padding-bottom: 80px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: #0e0831;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 2px solid #5d5976;
+  gap: 20px;
+}
+
+.Profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.ProfileMenu {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.ProfileImage img {
+  width: 50px;
+  border-radius: 100%;
+}
+
+.CoursesWrap {
+  display: grid;
+  grid-template-columns: 350px 350px 350px 350px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.CourseBlock {
+  border: 2px solid #5d5976;
+  background-color: #0e0831;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.CourseBlock img {
+  width: 100%;
+  height: 180px;
+  border-radius: 5px;
+  border: 2px solid #5d5976;
+  object-fit: cover;
+}
+
+.CourseBlock h2 {
+  margin: 2px 0px;
+  font-size: 20px;
+}
+
+.CourseFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.CourseFooterTags {
+  display: flex;
+  gap: 5px;
+}
+
+.Tag {
+  border-radius: 30px;
+  background-color: #fc5618;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.Footer {
+  display: flex;
+  background-color: #0e0831;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid #5d5976;
+}
+
+@media only screen and (max-width: 1500px) {
+  .CoursesWrap {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .CoursesWrap {
+    display: grid;
+    grid-template-columns: 90%;
+    gap: 20px;
+    justify-content: center;
+  }
+}
