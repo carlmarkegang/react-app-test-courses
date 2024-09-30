@@ -91,6 +91,11 @@ a:hover {
   justify-content: space-between;
 }
 
+.CourseFooterTags {
+  display: flex;
+  gap: 5px;
+}
+
 .Tag {
   border-radius: 30px;
   background-color: #fc5618;
