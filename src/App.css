@@ -1,0 +1,92 @@
+body {
+  background-color: #282344;
+  color: rgb(240, 248, 255);
+}
+
+button {
+  background-color: rgb(51, 108, 215);
+  color: rgb(240, 248, 255);
+  outline: transparent;
+  border: 0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.4s;
+}
+
+button:hover {
+  background-color: rgb(114 153 227);
+}
+
+a {
+  color: rgb(240, 248, 255);
+  text-decoration: none;
+}
+
+.Profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  background-color: #0e0831;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-bottom: 1px solid white;
+  gap: 20px;
+}
+
+.ProfileMenu {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.ProfileImage img {
+  width: 50px;
+  border-radius: 100%;
+}
+
+.CoursesWrap {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  gap: 2%;
+  justify-content: center;
+}
+
+.CourseBlock {
+  border: 2px solid blue;
+  background-color: #0e0831;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.CourseBlock img {
+  width: 100%;
+  height: 180px;
+  border-radius: 5px;
+}
+
+.CourseBlock h2 {
+  margin: 0px;
+}
+
+.CourseFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Tag {
+  border-radius: 30px;
+  background-color: #fc5618;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.Footer {
+  padding: 20px;
+  background-color: #0e0831;
+  display: flex;
+  margin-top: 50px;
+}
