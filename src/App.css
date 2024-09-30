@@ -62,7 +62,7 @@ a:hover {
 
 .CoursesWrap {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-columns: 350px 350px 350px 350px;
   gap: 20px;
   justify-content: center;
 }
@@ -79,6 +79,7 @@ a:hover {
   height: 180px;
   border-radius: 5px;
   border: 2px solid #5d5976;
+  object-fit: cover;
 }
 
 .CourseBlock h2 {
@@ -113,4 +114,22 @@ a:hover {
   align-items: center;
   justify-content: center;
   border-top: 2px solid #5d5976;
+}
+
+@media only screen and (max-width: 1500px) {
+  .CoursesWrap {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .CoursesWrap {
+    display: grid;
+    grid-template-columns: 90%;
+    gap: 20px;
+    justify-content: center;
+  }
 }
