@@ -3,12 +3,14 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header>
-        <Profile />
-      </header>
-      <CoursesWrap />
+      <div className="AppContainer">
+        <header>
+          <Profile />
+        </header>
+        <CoursesWrap />
+      </div>
       <footer>
-      <Footer />
+        <Footer />
       </footer>
     </div>
   );
@@ -17,7 +19,7 @@ function App() {
 function Profile() {
   return (
     <div class="Profile">
-      <div class="ProfileImage"><img src="https://avatars.githubusercontent.com/u/11271706?v=4&size=64"/></div>
+      <div class="ProfileImage"><img src="https://avatars.githubusercontent.com/u/11271706?v=4&size=64" /></div>
       <div class="ProfileMenu"><a href="#">My Profile</a><a href="#">Logout</a></div>
     </div>
   );
@@ -50,10 +52,10 @@ function CourseBlock() {
           <div className="Tag">
             test
           </div>
-          </div>
-          <div>
-            <button>Buy</button>
-          </div>
+        </div>
+        <div>
+          <button>Buy</button>
+        </div>
       </div>
     </div>
   );
