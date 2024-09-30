@@ -1,4 +1,6 @@
 import './App.css';
+import { GetCourses } from './components/LoadCourses'
+
 
 function App() {
   return (
@@ -19,50 +21,54 @@ function App() {
 
 function Profile() {
   return (
-    <div class="Profile">
-      <div class="ProfileImage"><img src="https://avatars.githubusercontent.com/u/11271706?v=4&size=64" alt="Profile"/></div>
-      <div class="ProfileMenu"><a href="#">My Profile</a><a href="#">Logout</a></div>
+    <div className="Profile">
+      <div className="ProfileImage"><img src="https://avatars.githubusercontent.com/u/11271706?v=4&size=64" alt="Profile" /></div>
+      <div className="ProfileMenu"><a href="#">My Profile</a><a href="#">Logout</a></div>
     </div>
   );
 }
 
 function Title() {
   return (
-    <div class="Title">
+    <div className="Title">
       <h1><a href="#">Courses</a></h1>
     </div>
   );
 }
 
 function CoursesWrap() {
+  const courses = GetCourses();
+
   return (
     <div className="CoursesWrap">
-      <CourseBlock />
-      <CourseBlock />
-      <CourseBlock />
-      <CourseBlock />
-      <CourseBlock />
-      <CourseBlock />
-      <CourseBlock />
-      <CourseBlock />
+      {courses.map((course, index) => (
+        <CourseBlock
+          key={index}
+          course={{
+            name: course.name,
+            description: course.description,
+            imageLink: course.imageLink,
+            tags: course.tags,
+          }}
+        />
+      ))}
     </div>
   );
 }
 
-function CourseBlock() {
+function CourseBlock({ course }) {
   return (
     <div className="CourseBlock">
-      <img src="https://i.imgur.com/8XcCjF1.jpeg" alt="Course" />
-      <h2>J.R.R. Tolkien World-building</h2>
-      <p>Explore Tolkien's writing in detail</p>
+      <img src={course.imageLink} alt="Course" />
+      <h2>{course.name}</h2>
+      <p>{course.description}</p>
       <div className="CourseFooter">
         <div className="CourseFooterTags">
-          <div className="Tag">
-            Fiction
-          </div>
-          <div className="Tag" style={{backgroundColor:"rgb(55 108 4)"}}>
-            Writing
-          </div>
+          {course.tags.map((tag, index) => (
+            <div key={index} className="Tag" style={{ backgroundColor: tag.color }}>
+              {tag.name}
+            </div>
+          ))}
         </div>
         <div>
           <button>Buy Course</button>
