@@ -19,7 +19,7 @@ function App() {
 function Profile() {
   return (
     <div class="Profile">
-      <div class="ProfileImage"><img src="https://avatars.githubusercontent.com/u/11271706?v=4&size=64" /></div>
+      <div class="ProfileImage"><img src="https://avatars.githubusercontent.com/u/11271706?v=4&size=64" alt="Profile image"/></div>
       <div class="ProfileMenu"><a href="#">My Profile</a><a href="#">Logout</a></div>
     </div>
   );
@@ -44,7 +44,7 @@ function CoursesWrap() {
 function CourseBlock() {
   return (
     <div className="CourseBlock">
-      <img src="https://i.imgur.com/8XcCjF1.jpeg" />
+      <img src="https://i.imgur.com/8XcCjF1.jpeg" alt="Course image" />
       <h2>Name of course</h2>
       <p>Tests 123 123</p>
       <div className="CourseFooter">
