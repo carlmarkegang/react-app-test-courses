@@ -63,9 +63,7 @@ function CourseBlock({ course }) {
       <div className="CourseFooter">
         <div className="CourseFooterTags">
           {course.tags.map((tag, index) => (
-            <div key={index} className="Tag" style={{ backgroundColor: tag.color }}>
-              {tag.name}
-            </div>
+             <Tag key={index} name={tag.name} color={tag.color} />
           ))}
         </div>
         <div>
@@ -76,6 +74,13 @@ function CourseBlock({ course }) {
   );
 }
 
+const Tag = ({ name, color }) => {
+  return (
+    <div className="Tag" style={{ backgroundColor: color }}>
+      {name}
+    </div>
+  );
+};
 
 function Footer() {
   return (
